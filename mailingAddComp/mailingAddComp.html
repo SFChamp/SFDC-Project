@@ -1,0 +1,33 @@
+<template>
+    <div class="slds-text-heading_small">
+		{sectionHeader}
+	</div>
+	<div class="slds-grid slds-p-bottom_small min-size-large-field slds-wrap">
+		<div class="slds-col slds-size_1-of-2">
+			<lightning-input type="text" name="addressLine1" class="addressFirstLine" required label="Address Line 1"
+			 disabled={isAddressLine1Disabled}
+			value={addressLine1} max-length="25" onblur={handleBlurAddressLine1}
+			></lightning-input>
+		</div>
+		<div class="slds-col slds-p-left_x-small slds-size_1-of-2">
+			<lightning-input type="text" name="addressLine2" class="addressSecondLine"  label="Address Line 2"
+			disabled={isAddressLine2Disabled}
+			value={addressLine2} max-length="20" onblur={handleBlurAddressLine2}></lightning-input>
+		</div>
+	</div>
+	<div class="slds-grid slds-p-bottom_small min-size-large-field slds-wrap">
+		<div class="slds-col slds-size_1-of-2">
+			<lightning-input type="text" name="city"  required label="i" disabled={isCityDisabled} value={city}  max-length="18"
+			onblur={handleBlurCity}></lightning-input>
+		</div>
+		<div class="slds-col slds-p-left_x-small slds-size_1-of-4">
+			<lightning-input type="text" label="State" disabled value={state}></lightning-input>
+		</div>
+		<div class="slds-col slds-p-left_x-small slds-size_1-of-4">
+			<lightning-input type="text" label="Zip Code" disabled value={zipCode}></lightning-input>
+		</div>
+		<div class="slds-col slds-p-left_x-small slds-size_1-of-4">
+			<lightning-input type="text" label="Country" disabled value={country}></lightning-input>
+		</div>
+	</div>
+</template>
